@@ -5,6 +5,9 @@ int main() {
     std::cout << "Welcome to C++ Pizza Deliveries ! \n";
     int bill = 0;
     std::string size;
+
+//Getting size
+
     while (true) {
         std::cout << "What size pizza do you want? press capital S, M or L:\n";
         std::cin >> size;
@@ -14,16 +17,19 @@ int main() {
             std::cout << "So, we go for " << size << "\n";
             bill = 10;
             break;
+
         } else if (size == "M") {
             size = "a medium..";
             std::cout << "So, we go for " << size <<"\n";
             bill = 8;
             break;
+
         } else if (size == "S") {
             size = "a small..";
             std::cout << "So we go for " << size << "\n";
             bill = 6;
             break;
+
         } else {
             std::cout << "Input error, please enter a valid size..\n";
             continue;
