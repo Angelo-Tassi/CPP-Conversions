@@ -2,6 +2,7 @@
 
 int main() {
     std::cout << "Welcome to C++ Pizza Deliveries !";
+    int bill =0;
     return 0;
 }
 
