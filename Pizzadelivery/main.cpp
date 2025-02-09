@@ -5,8 +5,10 @@ int main() {
     std::cout << "Welcome to C++ Pizza Deliveries ! \n";
     int bill = 0;
     std::string size;
+    std::string pepperoni;
+    std::string cheese;
 
-//Getting size
+    //Getting size
 
     while (true) {
         std::cout << "What size pizza do you want? press capital S, M or L:\n";
@@ -33,12 +35,47 @@ int main() {
         } else {
             std::cout << "Input error, please enter a valid size..\n";
             continue;
-        }
-
     }
-    std::cout << "Your bill is " << bill << " $ at the moment ...";
-    return 0;
 }
+    std::cout << "Your bill is " << bill << " $ at the moment ... \n";
+
+
+    while (true) {
+        std::cout<< "Do you want pepperoni added to your pizza ?\n"  "Type capital Y for yes and N for No :\n";
+        std::cin >> pepperoni;
+        if (pepperoni == "Y") {
+            bill += 2;
+            break;
+        }if (pepperoni == "N"){
+            std::cout << "Ok we will not charge pepperoni ..";
+            break;
+
+        }  else {
+            std::cout << "Input error, please enter a valid option..\n";
+            continue;
+        }
+    }
+    std::cout << "Your bill is " << bill << " $ at the moment ...\n";
+
+    while (true) {
+        std::cout<< "Do you want extra cheese added to your pizza ?\n"  "Type capital Y for yes and N for No :\n";
+        std::cin >> cheese;
+        if (cheese == "Y") {
+            bill += 1;
+            break;
+        }if (cheese == "N"){
+            std::cout << "Ok we will not charge extra cheese ..";
+            break;
+
+        }  else {
+            std::cout << "Input error, please enter a valid option..\n";
+            continue;
+        }
+    }
+
+    std::cout << "Your final bill is " << bill << " $ NOW GTFO of here ! ...\n";
+    return 0;
+    }
 
 
 
